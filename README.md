@@ -146,7 +146,7 @@ python train.py
 or
 
 ```bash
-python app.py
+python streamlit run STapp.py
 ```
 
 ---
