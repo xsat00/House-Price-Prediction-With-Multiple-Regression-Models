@@ -1,61 +1,81 @@
 # 🏠 Multi-Model House Price Prediction System
 
-# Project DIscription
+## 📌 Project Overview
+
 This project predicts house prices using multiple Machine Learning regression algorithms and automatically identifies the best-performing model based on evaluation metrics.
 
-## Machine Learning Workflow
+The project follows a complete end-to-end Machine Learning workflow, from data preprocessing and feature engineering to model evaluation and prediction.
+
+---
+
+## 🚀 Technologies Used
+
+- Python
+- Pandas
+- NumPy
+- Scikit-Learn
+- XGBoost
+- LightGBM
+- TensorFlow / Keras
+- Matplotlib
+- Seaborn
+
+---
+
+## 🔄 Machine Learning Workflow
 
 1. Data Cleaning
-2. Missing Value Treatment
-3. Feature Engineering
-4. Exploratory Data Analysis
+2. Missing Value Handling
+3. Exploratory Data Analysis (EDA)
+4. Feature Engineering
 5. Feature Scaling
 6. Model Training
 7. Hyperparameter Tuning
 8. Multi-Model Evaluation
 9. Best Model Selection
-10. Price Prediction
+10. House Price Prediction
 
-## Machine Learning Models
+---
 
-The following regression algorithms were trained and compared:
+## 🤖 Models Evaluated
+
+The following regression models were trained and compared:
 
 1. Linear Regression
-2. ANN
-3. Random Forest Regressor
-4. Huber  Regressor
-5. XGBoost Regressor
-6. KNN Regressor
-7. Lasso Regressor
-8. LGBM
-9. Polynomial Regression
-10. Ridge Regression
-11. SGD Regressor
-12. SVR
+2. Ridge Regression
+3. Lasso Regression
+4. ElasticNet Regression
+5. Polynomial Regression
+6. Random Forest Regressor
+7. XGBoost Regressor
+8. LightGBM Regressor
+9. Support Vector Regressor (SVR)
+10. K-Nearest Neighbors Regressor (KNN)
+11. Huber Regressor
+12. SGD Regressor
+13. Artificial Neural Network (ANN)
 
-The best model was selected based on evaluation metrics.
+---
 
-## Key Findings
+## 📊 Key Findings
 
 A total of 13 regression models were trained and evaluated.
 
-Surprisingly, simple linear models outperformed more complex ensemble and neural network approaches on this dataset.
+Despite testing advanced ensemble and neural network models, regularized linear models achieved the best overall performance on this dataset.
 
-Best Performing Model:
+### 🏆 Best Performing Model: Lasso Regression
 
-🥇 Lasso Regression
+| Metric | Value |
+|----------|----------|
+| R² Score | 0.9146 |
+| MAE | 82,657 |
+| MSE | 10.54 Billion |
 
-R² Score: 0.9146
+These results suggest that the relationship between house features and target prices is largely linear, making regularized linear models highly effective.
 
-MAE: 82,657
+---
 
-MSE: 10.54 Billion
-
-The results suggest that the relationship between house features and target prices in this dataset is largely linear, making regularized linear models highly effective.
-
-# Performance Table
-
-## Model Performance Comparison
+## 📈 Model Performance Comparison
 
 | Model | MAE | R² Score |
 |---------|---------|---------|
@@ -63,7 +83,7 @@ The results suggest that the relationship between house features and target pric
 | Linear Regression | 82,657 | 0.9146 |
 | Ridge Regression | 82,659 | 0.9146 |
 | Polynomial Regression | 83,413 | 0.9137 |
-| LGBM | 92,133 | 0.8940 |
+| LightGBM | 92,133 | 0.8940 |
 | Random Forest | 97,925 | 0.8781 |
 | ElasticNet | 99,126 | 0.8780 |
 | XGBoost | 101,565 | 0.8694 |
@@ -71,15 +91,80 @@ The results suggest that the relationship between house features and target pric
 | ANN | 199,284 | 0.5020 |
 | Huber Regressor | 199,465 | 0.5011 |
 | SVR | 282,947 | 0.0004 |
-| SGDRegressor | Failed to Converge |
+| SGD Regressor | Failed to Converge |
 
-## Conclusion
+---
 
-This project demonstrates a complete end-to-end machine learning workflow for house price prediction.
+## 📷 Visual Results
 
-Thirteen different regression algorithms were trained and evaluated using MAE, MSE, and R² metrics.
+### Model Leaderboard
 
-Although advanced ensemble methods such as Random Forest, LightGBM, and XGBoost were tested, regularized linear models achieved the highest predictive performance on the dataset.
+![Model Leaderboard](results/model_leaderboard.png)
 
-Lasso Regression was selected as the final model with an R² score of 91.46%.
+### R² Score Comparison
 
+![R2 Comparison](results/r2_comparison.png)
+
+### MAE Comparison
+
+![MAE Comparison](results/mae_comparison.png)
+
+### Actual vs Predicted (Lasso Regression)
+
+![Actual vs Predicted](results/actual_vs_predicted_lasso.png)
+
+---
+
+## 💼 Business Use Case
+
+This project can assist:
+
+- Real Estate Companies
+- Property Buyers
+- Property Sellers
+- Housing Market Analysts
+- Investment Firms
+
+by providing data-driven property price estimates.
+
+---
+
+## ⚙️ Installation
+
+```bash
+git clone <repository-url>
+cd house-price-prediction
+pip install -r requirements.txt
+```
+
+## ▶️ Run the Project
+
+```bash
+python train.py
+```
+
+or
+
+```bash
+python app.py
+```
+
+---
+
+## 🎯 Conclusion
+
+This project demonstrates a complete end-to-end Machine Learning pipeline for house price prediction.
+
+A total of 13 regression algorithms were trained and evaluated using MAE, MSE, and R² metrics. While advanced models such as Random Forest, LightGBM, XGBoost, and ANN were explored, Lasso Regression achieved the best predictive performance with an R² score of 91.46%.
+
+The project highlights the importance of benchmarking multiple algorithms rather than assuming that more complex models will always perform better.
+
+---
+
+## 👨‍💻 Author
+
+Sathwik
+
+B.Tech Computer Science Engineering
+
+Aspiring AI / ML Engineer
